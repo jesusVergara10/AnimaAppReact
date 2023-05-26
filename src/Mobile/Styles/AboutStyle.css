@@ -1,0 +1,91 @@
+.gridContainegrAbout {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+      'logo'
+      'inspquote'
+      'buttons'
+      'texto'
+      'logotype'
+      ;
+      grid-template-columns: 100vw;
+      grid-template-rows: 10% 5% 5% 70% 10%;
+  }
+
+  .logoAbout{
+    width: 100%;
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+  }
+
+  .imgAbout{
+    width: 96%;
+    object-fit: contain;
+  }
+
+  .inspquoteAbout{
+    grid-area: inspquote;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+  }
+
+  .textAbout{
+    font-size:.58rem;
+  }
+
+  .buttonsAbout{
+    grid-area: buttons;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-bottom: 2px solid black;
+  }
+
+  .btnAbout{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+  }
+  .btn2About{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-right: 2px solid black;
+    border-radius: 0px;
+  }
+
+  .textContainerAbout{
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;    
+    border-bottom: 2px solid black;
+  }
+
+  .logotypeAbout{
+    width: 100%;
+    height: 100%;
+    grid-area: logotype;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .anbtAbout{
+    height: 30%;
+    }

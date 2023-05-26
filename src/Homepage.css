@@ -1,0 +1,110 @@
+    .gridContainer {
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      grid-template-areas:
+      'eIa AH eDa'
+      'iM contenido dM'
+      'eIab ANBT eDab'
+      ;
+      grid-template-columns: 15% 70% 15%;
+      grid-template-rows: 10% 80% 10%;
+  
+    }
+  
+    .caja {
+      border: 2px solid black;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+  
+    .c1 {
+      display: block;
+      grid-area: eIa;
+      font-size: 0.8rem;
+    }
+  
+    .c2 {
+      grid-area: AH;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 4.5rem;
+    }
+
+    .logo{
+      width: 98%;
+      height: 98%;
+      object-fit: contain;
+    }
+  
+    .c3 {
+      grid-area: eDa;
+      font-size: 0.8rem;
+      display: block;
+    }
+  
+    .c4 {
+      grid-area: iM;
+      border: 2px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .projectInfo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 95%;
+    }
+  
+    .c5 {
+      grid-area: contenido;
+      border: 2px solid black;
+    }
+  
+    .c6 {
+      display: block;
+      grid-area: dM;
+      border: 2px solid black;
+    }
+    .botonContainer{
+      width: 100%;
+      border-style: solid;
+      border-color: black;
+    }
+    .boton{
+      
+      background-color: white;
+    }
+  
+    .c7 {
+      display: block;
+      grid-area: eIab;
+      border: 2px solid black;
+    }
+  
+    .c8 {
+      grid-area: ANBT;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      border: 2px solid black;
+    }
+
+    .logotype{
+      width: 20%;
+    object-fit: cover;
+    }
+
+   
+  
+    .c9 {
+      display: block;
+      grid-area: eDab;
+      border: 2px solid black;
+    }
+  
