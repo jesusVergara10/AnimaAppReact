@@ -82,7 +82,7 @@ const Projects = () => {
         <p className="textProjects">{document?.data.inspquote}</p>
       </div>
       <div className="buttonsProjects">
-        <button className="btn2Projects">PROJECTS</button>
+        <button className="btn2Projects" onClick={()=>navigate("/projectsmenu")} >BACK</button>
         <button className="btnProjects" onClick={() => navigate("/about")}>
           ABOUT
         </button>
@@ -90,7 +90,7 @@ const Projects = () => {
       <div className="imageProjects">
         <SliderRC images={elementos[0]?.imageSlides ?? []}></SliderRC>
       </div>
-      <div className="logotypeProjects">
+      <div className="logotypeProjectsName">
         <p>{elementos[0]?.data?.title}</p>
       </div>
       <div className="projectInfo">
@@ -99,7 +99,7 @@ const Projects = () => {
             onClick={() => {
               setOpen(true);
             }}
-            className="btnProjects"
+            className="btnProjectInfo"
           >
             PROJECT INFO
           </button>
@@ -109,14 +109,14 @@ const Projects = () => {
               onClick={() => {
                 setOpen(false);
               }}
-              className="btnProjects"
+              className="btnClose"
             >
               CLOSE
             </button>
             {elementos[0].data.projectinfo.map((item, i) => {
               return(
               <div>
-                <div>{item.text}</div> 
+                <div className="projectInfoText">{item.text}</div> 
               </div>
               )
             })}

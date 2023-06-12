@@ -62,8 +62,8 @@
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     border-right: 2px solid black;
     border-radius: 0px;
   }
@@ -100,5 +100,43 @@
     align-items:center;
     justify-content: center;
     border-bottom: 2px solid black;
+  }
+  .projectInfoText{
+    font-size: small;
+  }
+
+  .btnClose{
+    display: flex;
+    width: 50%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-size: small;
+  }
+  .btnProjectInfo{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-size: small;
+  }
+  .logotypeProjectsName{
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    grid-area: logotype;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    font-size: small;
+
   }
 

@@ -25,7 +25,7 @@ const About = () => {
         </div>
         <div className="buttonsAbout">
             <button className="btn2About" onClick={()=>navigate("/projectsmenu")}>PROJECTS</button>
-            <button className="btnAbout"  onClick={()=>navigate("/")}>BACK</button>
+            <button className="btnAbout"  onClick={()=>navigate("/")}>HOME</button>
         </div>
         <div className='textContainerAbout'>
             <p>{documentAbout?.data.textabout[0].text}</p>
