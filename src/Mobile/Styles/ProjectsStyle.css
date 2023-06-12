@@ -28,6 +28,7 @@
   }
 
   .inspquoteProjects{
+
     grid-area: inspquote;
     display: flex;
     justify-content: center;
@@ -36,7 +37,7 @@
   }
 
   .textProjects{
-    font-size:.58rem;
+    font-size:.75rem;
   }
 
   .buttonsProjects{
@@ -45,6 +46,7 @@
     justify-content:center;
     align-items: center;
     border-bottom: 2px solid black;
+    font-size:.8rem;
   }
 
   .btnProjects{
@@ -55,6 +57,7 @@
     align-items: center;
     background-color: white;
     color: black;
+
   }
   .btn2Projects{
     display: flex;
@@ -66,6 +69,7 @@
     color: white;
     border-right: 2px solid black;
     border-radius: 0px;
+    
   }
 
   .imageProjects{

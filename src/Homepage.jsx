@@ -6,11 +6,13 @@ import {
   useAllPrismicDocumentsByType,
 } from "@prismicio/react";
 import SliderRC from "../src/Components/SliderRC";
+import { useNavigate } from "react-router-dom";
+
 
 const Homepage = () => {
   const [document] = useSinglePrismicDocument("homepage");
   const [projects] = useAllPrismicDocumentsByType("projects");
-
+  const navigate = useNavigate();
 
   const elementos =
     projects?.map((item) => {
@@ -99,11 +101,13 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="caja c7">esquina Izq Abajo</div>
+      <div className="caja c7"></div>
       <div className="caja c8">
         <img className="logotype" src={document?.data.logotype.url} alt="" />
       </div>
-      <div className="caja c9">{document?.data.contact}</div>
+      <div className="caja c9">
+        {document?.data.contact}
+        </div>
     </div>
   );
 };
