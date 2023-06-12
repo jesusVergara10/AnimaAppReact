@@ -11,7 +11,7 @@ const ProjectsMenu = () => {
   const [document] = useSinglePrismicDocument("mobilehome");
   const [projects] = useAllPrismicDocumentsByType("projects");
   const navigate = useNavigate();
-
+  // debugger
   return (
     <div className="containerProjectsMenu">
       <div className="logoPMenu">
@@ -25,7 +25,7 @@ const ProjectsMenu = () => {
         <p className="textPMenu">{document?.data.inspquote}</p>
       </div>
       <div className="buttonsPM">
-        <button className="btn2Pmenu">PROJECTS</button>
+        <button className="btn2Pmenu" onClick={() => navigate("/")}>BACK</button>
         <button className="btnPmmenu" onClick={() => navigate("/about")}>
           ABOUT
         </button>
@@ -35,8 +35,8 @@ const ProjectsMenu = () => {
         projects.map((item, i) => {
           return(
           <div key={i} className="projectsdiv">
-            <Link to={"/projects/" + item.data.title}> 
-            <p>{item.data.services}</p>
+            <Link className="projectsLink" to={"/projects/" + item.data.title}> 
+            <p>{item.data.serviceoneword}</p>
             <p>{item.data.title}</p>
             </Link>
           </div>

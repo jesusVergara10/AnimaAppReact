@@ -1,4 +1,4 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import {
   useSinglePrismicDocument,
   usePrismicDocumentByUID,
@@ -27,20 +27,20 @@ const Projects = () => {
   const [open, setOpen] = useState(false);
 
   const GridContainerExpanded = styled.div`
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-areas:
-    "logo"
-    "inspquote"
-    "buttons"
-    "image"
-    "logotype"
-    "projectInfo";
-  grid-template-columns: 100vw;
-  animation:  ${open? expand: shrink} 1s linear forwards;
- // grid-template-rows: 10% 5% 5% 20% 5% 50%;
-`;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+      "logo"
+      "inspquote"
+      "buttons"
+      "image"
+      "logotype"
+      "projectInfo";
+    grid-template-columns: 100vw;
+    animation: ${open ? expand : shrink} 1s linear forwards;
+    // grid-template-rows: 10% 5% 5% 20% 5% 50%;
+  `;
 
   let { projectName } = useParams();
   const elementos =
@@ -71,6 +71,8 @@ const Projects = () => {
         };
       }) ?? [];
 
+  //  debugger
+
   return (
     <GridContainerExpanded>
       <div className="logoProjects">
@@ -92,13 +94,34 @@ const Projects = () => {
         <p>{elementos[0]?.data?.title}</p>
       </div>
       <div className="projectInfo">
-        {!open ? <button onClick={()=>{setOpen(true)}} className="btnProjects">PROJECT INFO</button> :
-        <div className="logotypeProjects">
-          <button onClick={()=>{setOpen(false)}} className="btnProjects">CLOSE</button>
-          <div >ProjectInfo</div>
-        </div>
-        }
-        
+        {!open ? (
+          <button
+            onClick={() => {
+              setOpen(true);
+            }}
+            className="btnProjects"
+          >
+            PROJECT INFO
+          </button>
+        ) : (
+          <div className="logotypeProjects">
+            <button
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="btnProjects"
+            >
+              CLOSE
+            </button>
+            {elementos[0].data.projectinfo.map((item, i) => {
+              return(
+              <div>
+                <div>{item.text}</div> 
+              </div>
+              )
+            })}
+          </div>
+        )}
       </div>
     </GridContainerExpanded>
   );

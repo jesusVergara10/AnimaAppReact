@@ -5,17 +5,18 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const SliderRC = ({ images }) => {
   const styleObj = {
     objectFit: 'contain',
+    width: '100%',
     height: '100%'
-    };
+
+  };
     const styleCont = {
+      
       width: '100%',
-      justifyContent: 'center',
-      alignItems: 'center',
-      objectFit: 'contain',
+      height: '100%'
 
     }
   return (
-    <div style={styleCont}>
+    <div id="slider1stdiv" style={styleCont}>
       <Carousel
         showArrows={true}
         autoPlay={false}

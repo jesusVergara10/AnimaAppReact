@@ -78,13 +78,17 @@
 
   .projectInfo{
     z-index: 1;
-
     grid-area: projectInfo;
     display: flex;
     justify-content:center;
     align-items: center;
   }
-
+  .projectInfoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .logotypeProjects{
     z-index: 1;
     background-color: white;
@@ -92,7 +96,8 @@
     height: 100%;
     grid-area: logotype;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items:center;
     justify-content: center;
     border-bottom: 2px solid black;
   }

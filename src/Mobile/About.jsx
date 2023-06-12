@@ -14,7 +14,6 @@ const About = () => {
     const [documentAbout] = useSinglePrismicDocument("about");
     const [documentHome] = useSinglePrismicDocument("mobilehome");
     const navigate = useNavigate();
-
     // debugger
   return (
     <div className="gridContainegrAbout">
@@ -26,13 +25,13 @@ const About = () => {
         </div>
         <div className="buttonsAbout">
             <button className="btn2About" onClick={()=>navigate("/projectsmenu")}>PROJECTS</button>
-            <button className="btnAbout">ABOUT</button>
+            <button className="btnAbout"  onClick={()=>navigate("/")}>BACK</button>
         </div>
         <div className='textContainerAbout'>
-            <p>{documentAbout?.data.textabout}</p>
-            <br />
-            <Link to="">FACEBOOK</Link>
-            <Link to="">INSTAGRAM</Link>
+            <p>{documentAbout?.data.textabout[0].text}</p>
+            <p>{documentAbout?.data.textabout[1].text}</p>
+            <Link className='link' to="https://www.facebook.com/anbt.studio" target="_blank">FACEBOOK</Link>
+            <Link className='link' to="https://www.instagram.com/anbt.studio/" target="_blank">INSTAGRAM</Link>
         </div>
         <div className="logotypeAbout">
         <img className="anbtAbout" src={documentHome?.data.logotype.url} alt="" />

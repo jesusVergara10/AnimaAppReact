@@ -59,3 +59,24 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.carousel-root {
+  height: 100%
+}
+
+.carousel-root > .carousel-slider{
+  height: 100%
+}
+
+.carousel-root > .carousel-slider > .slider-wrapper{
+  height: 100%;
+ 
+}
+.carousel-slider > .slider-wrapper > .slider {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.carousel-slider > .slider-wrapper > .slider > .slide{
+  height: 100%;
+}
