@@ -19,7 +19,7 @@ const SliderRC = ({ images }) => {
     <div id="slider1stdiv" style={styleCont}>
       <Carousel
         showArrows={true}
-        autoPlay={false}
+        autoPlay={true}
         showIndicators={false}
         infiniteLoop={true}
         dynamicHeight={false}
