@@ -23,7 +23,7 @@ const SliderRC = ({ images }) => {
         showIndicators={false}
         infiniteLoop={true}
         dynamicHeight={false}
-        interval={40000}
+        interval={4000}
         showThumbs={false}
       >
         {images.map((image, i) => (
